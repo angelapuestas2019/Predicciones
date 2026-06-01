@@ -2,6 +2,26 @@ import streamlit as st
 import requests
 import random
 from datetime import datetime, timedelta
+# ... tus otros imports ...
+
+# MANTÉN TU CONFIGURACIÓN ACTUAL
+st.set_page_config(page_title="Flashscore Analítica Premium", layout="wide")
+
+# =========================================================================
+# NUEVO: BLOQUE DE OCULTAMIENTO (NO ALTERA TU LÓGICA DE DATOS)
+# =========================================================================
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            [data-testid="stToolbar"] {visibility: hidden;}
+            [data-testid="stAppToolbar"] {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+# ... AQUÍ COMIENZA TU CÓDIGO ORIGINAL ...
 
 # 1. Configuración de entorno nativo ancho
 st.set_page_config(page_title="Flashscore Analítica Premium", layout="wide")
